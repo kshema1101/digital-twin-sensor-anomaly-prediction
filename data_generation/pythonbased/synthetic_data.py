@@ -13,12 +13,15 @@ def generate_synthetic_data():
     # added the noise to the vibration data
     #introduce a fault in the system
     fault_start = 700
+    fault_label = np.zeros(time_steps)
+    fault_label[fault_start:] = 1
     temperature[fault_start:] += 10 + 0.1 * (time[fault_start:] - fault_start)
     vibration[fault_start:] += 0.05 * (time[fault_start:] - fault_start)
     #create a pandas dataframe to store the data
     data = pd.DataFrame({ "time": time,
                           "temperature": temperature,
-                          "vibration": vibration})
+                          "vibration": vibration,
+                          "fault_label": fault_label})
     #storing the data
     data.to_csv("synthetic_data.csv",index=False)
     #plot the data for temperature
