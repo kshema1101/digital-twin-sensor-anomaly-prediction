@@ -37,6 +37,6 @@ def evaluate_model(model, X_test, y_test):
     print("Classification Report: ", classification_rep)
     
 if __name__ == "__main__":
-    X_train, X_test, y_train, y_test = preprocess_data("../synthetic_data.csv")
+    X_train, X_test, y_train, y_test = preprocess_data("synthetic_data.csv")
     model = train_model_RF(X_train, y_train)
-    evaluate_model(model, X_test, y_test)
+    evaluate_model(model, X_test, y_test)   
