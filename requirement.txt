@@ -3,7 +3,6 @@ pandas==2.0.2
 scikit-learn==1.2.2
 scipy==1.10.1
 torch==2.0.1
-torchaudio==2.0.2
 torchsummary==1.5.1
 torchvision==0.15.2
 matplotlib==3.7.1
@@ -12,5 +11,3 @@ opencv-contrib-python==4.8.0.74
 opencv-python==4.8.0.74
 opencv-python-headless==4.8.0.74
 openpyxl==3.1.4
-onnx==1.17.0
-onnxruntime==1.19.2
