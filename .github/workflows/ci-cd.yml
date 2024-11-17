@@ -32,13 +32,12 @@ jobs:
       # Step 4: Generate synthetic data
       - name: Generate synthetic data
         run: |
-          python data_generation/synthetic_data_generator.py
+          python data_generation/pythonbased/synthetic_data.py
 
       # Step 5: Train and evaluate models
       - name: Train and evaluate models
         run: |
           python ML/randomforest.py
-          python ML/train_NN_and_export.py
 
       # Step 6: Build Docker image
       - name: Build Docker image
